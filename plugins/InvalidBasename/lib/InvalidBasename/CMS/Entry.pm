@@ -15,9 +15,12 @@ sub pre_save {
   my $plugin = $app->component('invalidbasename');
   my $terms = {blog_id => $app->param('blog_id')};
   $terms->{basename} = $basename;
+  my $entry = $app->model('entry')->load($terms);
+  return 1 unless defined $entry;
+  my $id = $q->param('id') || undef;
+  return 1 if defined $id and $id == $entry->id;
   return $app->error(
-    $plugin->translate('The same basename exists.'))
-    if defined $app->model('entry')->load($terms);
+    $plugin->translate('The same basename exists.'));
   1;
 }
 
