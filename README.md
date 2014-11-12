@@ -1,4 +1,4 @@
-# MT ValidBasename Plugin
+# MT InvalidBasename Plugin
 
 This plugin provides a feature that entries can't have the same basename in the same blog.
 
@@ -8,7 +8,7 @@ This plugin provides a feature that entries can't have the same basename in the 
 
 Download and put the following directories into your Movable Type.
 
-* `plugins/ValidBasename` to `$MT_HOME/plugins`
+* `plugins/InvalidBasename` to `$MT_HOME/plugins`
 
 ソースコードをダウンロードして、上記のようにファイルをアップロードしてください。
 

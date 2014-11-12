@@ -1,4 +1,4 @@
-package ValidBasename::L10N;
+package InvalidBasename::L10N;
 
 use strict;
 use warnings;

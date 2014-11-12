@@ -1,18 +1,18 @@
-package ValidBasename::CMS::Entry;
+package InvalidBasename::CMS::Entry;
 
 use strict;
 use warnings;
 
 use MT;
 use MT::Log;
-use ValidBasename::Plugin;
+use InvalidBasename::Plugin;
 use Data::Dumper;
 
 sub pre_save {
   my ($cb, $app) = @_;
   my $q = $app->param;
   my $basename = $q->param('basename');
-  my $plugin = $app->component('validbasename');
+  my $plugin = $app->component('invalidbasename');
   my $terms = {blog_id => $app->param('blog_id')};
   $terms->{basename} = $basename;
   return $app->error(
